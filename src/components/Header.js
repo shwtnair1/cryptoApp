@@ -6,7 +6,6 @@ const Header = (props) =>{
     
 
     function handleChange(e){
-        e.preventDefault();
         setSearch(e.target.value);
     }
 
@@ -14,7 +13,7 @@ const Header = (props) =>{
     return (
         <div className='appcontainer'>
         <div className='searchcontainer'>
-            <form>
+            <form onSubmit={(e)=>e.preventDefault()}>
                 <input onChange={handleChange} placeholder='Provide coin name' value={search}/>
             </form>
         </div>
@@ -26,7 +25,7 @@ const Header = (props) =>{
                     symbol={coin.symbol} 
                     marketcap={coin.market_cap}
                     price={coin.current_price}
-                    pricechange={coin.price_change_24h}
+                    pricechange={coin.price_change_percentage_24h}
                     />
         })}
         </div>

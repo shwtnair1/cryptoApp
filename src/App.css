@@ -21,7 +21,6 @@
   align-items: center;
   font-size: calc(10px + 2vmin);
   color: white;
-  padding: 0px 140px 0px 140px;
 }
 
 /* .App-link {
@@ -66,10 +65,22 @@
 .coin-container div{
   min-width:300px;
   padding:14px;
+  display:flex;
+  flex-direction:row;
+  justify-items: start;
+  align-items: center;
+  border-bottom: 1px solid #d7d7d7;
 }
 
 .coin-container img{
   height: 30px;
   width: 30px;
   margin-right: 10px;
+}
+
+.red{
+  color: #f00606;
+}
+.green{
+  color: #11d811;
 }
