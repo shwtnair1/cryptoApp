@@ -9,7 +9,7 @@ const Header = (props) =>{
         setSearch(e.target.value);
     }
 
-    const filteredCoins = props.coins.filter((coin)=> coin.name.toLowerCase().includes(search.toLowerCase()))
+    const filteredCoins = props.coins ? props.coins.filter((coin)=> coin.name.toLowerCase().includes(search.toLowerCase())) :[];
     return (
         <div className='appcontainer'>
         <div className='searchcontainer'>
